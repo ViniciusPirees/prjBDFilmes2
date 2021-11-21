@@ -1,0 +1,19 @@
+{
+  "name": "prjbdfilmes2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ViniciusPirees/prjBDFilmes2.git"
+  },
+  "author": "Vinicius Pires e Matheus Fukuda",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ViniciusPirees/prjBDFilmes2/issues"
+  },
+  "homepage": "https://github.com/ViniciusPirees/prjBDFilmes2#readme"
+}

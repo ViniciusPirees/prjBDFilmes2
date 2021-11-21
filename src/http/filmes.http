@@ -1,0 +1,46 @@
+//Teste de Requisições REST - filmes
+@baseURL = http://localhost:4000
+@id = 
+###
+// GET - Lista todos os filmes
+GET {{baseURL}}/filmes
+Content-Type: application/json
+
+###
+// GET - Lista apenas um estudante pelo id
+GET {{baseURL}}/filmes/{{id}}
+Content-Type: application/json
+
+###
+// POST - Inclui um novo estudante
+POST {{baseURL}}/filmes
+Content-Type: application/json
+
+{
+   "nome":"",
+   "anoLancamento":,
+   "diretor":"",
+   "genero":"",
+   "notaIMDB":
+}
+
+### 
+// DELETE - Apaga um estudante através do id informado
+DELETE {{baseURL}}/filmes/{{id}}
+Content-Type: application/json
+
+###
+// PUT - Altera um estudante pelo ID
+PUT {{baseURL}}/filmes/
+Content-Type: application/json
+
+{
+    "_id": "", 
+    "nome":"",
+   "anoLancamento":,
+   "diretor":"",
+   "genero":"",
+   "notaIMDB":
+}
+
+

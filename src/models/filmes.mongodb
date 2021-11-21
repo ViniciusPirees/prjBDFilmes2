@@ -1,0 +1,66 @@
+//Selecione o database
+use('LabBD')
+
+// Remove a collection
+db.filmes.drop() 
+
+//Cria a collection com a validação do schema
+db.createCollection('filmes', {
+    validator: {
+       $jsonSchema: {
+          bsonType: 'object',
+          required: [ 'nome', 'anoLancamento', 'genero', 'diretor','notaIMDB' ],
+          properties: {
+             nome: {
+                bsonType: 'string',
+                description: 'Nome é obrigatório'
+             },
+             anoLancamento: {
+                bsonType: 'int',
+                minimum: 1890,
+                maximum: 2030,
+                description: 'Ano de lançamento deve ser um inteiro entre [ 1890 a 2030 ]'
+             },
+             genero: {
+                bsonType: 'string',
+                description: 'Gênero do filme é obrigatório'
+             },
+             diretor: {
+                bsonType: 'string',
+                description: 'Nome do(a) diretor(a) é obrigatório'
+             },
+             notaMédia: {
+                bsonType: [ 'double' ],
+                minimum: 0,
+                maximum: 10,
+               description: 'A nota deve ser um valor numérico'
+             }
+             
+             
+          }
+       }
+    },
+    validationLevel: 'strict', //moderate or off
+    validationAction: 'error' //warn
+ })
+
+//Insere um novo registro
+db.filmes.insertOne({
+   'nome':'Shang-Chi e a Lenda dos Dez Anéis',
+   'anoLancamento':2021,
+   'diretor':'Destin Daniel Cretton',
+   'genero':'Ação/Fantasia',
+   'notaIMDB':7.6
+})
+
+//Lista todos os registros
+db.filmes.find()
+//Lista um registro pelo Id
+db.filmes.find({"_id": {$eq: ObjectId("619a91eec893fe5d1eb82630")}})
+
+/*
+Saiba mais em: https://docs.mongodb.com/manual/core/schema-validation/
+*/
+
+db.filmes.find({nome: /shang/i})
+

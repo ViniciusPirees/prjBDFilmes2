@@ -29,7 +29,7 @@ db.createCollection('filmes', {
                 bsonType: 'string',
                 description: 'Nome do(a) diretor(a) é obrigatório'
              },
-             notaMédia: {
+             notaIMDB: {
                 bsonType: [ 'double' ],
                 minimum: 0,
                 maximum: 10,

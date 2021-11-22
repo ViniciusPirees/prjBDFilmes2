@@ -7,12 +7,12 @@ GET {{baseURL}}/filmes
 Content-Type: application/json
 
 ###
-// GET - Lista apenas um estudante pelo id
+// GET - Lista apenas um filme pelo id
 GET {{baseURL}}/filmes/{{id}}
 Content-Type: application/json
 
 ###
-// POST - Inclui um novo estudante
+// POST - Inclui um novo filme
 POST {{baseURL}}/filmes
 Content-Type: application/json
 
@@ -25,12 +25,12 @@ Content-Type: application/json
 }
 
 ### 
-// DELETE - Apaga um estudante através do id informado
+// DELETE - Apaga um filme através do id informado
 DELETE {{baseURL}}/filmes/{{id}}
 Content-Type: application/json
 
 ###
-// PUT - Altera um estudante pelo ID
+// PUT - Altera um filme pelo ID
 PUT {{baseURL}}/filmes/
 Content-Type: application/json
 
